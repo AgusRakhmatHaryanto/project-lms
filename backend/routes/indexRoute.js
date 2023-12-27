@@ -4,6 +4,7 @@ const userRouter = require('./userRoute')
 const courseRouter = require('./courseRoute')
 const lessonRoute = require('./lessonRoute')
 const assignmentRoute = require('./assignmentRoute')
+const enrollmentroute = require('./enrpllmentRoute')
 const multer = require("multer");
 // Configure multer storage
 const storage = multer.memoryStorage();
@@ -17,5 +18,6 @@ router.use(`/${API}/users`, userRouter)
 router.use(`/${API}/courses`, courseRouter)
 router.use(`/${API}/lessons`, lessonRoute)
 router.use(`/${API}/assignments`, assignmentRoute)
+router.use(`/${API}/enrollments`, enrollmentroute)
 
 module.exports = router
