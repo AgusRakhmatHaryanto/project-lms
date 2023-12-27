@@ -6,9 +6,6 @@ const bcrypt = require("bcrypt");
 exports.getAllUsers = async (req, res) => {
   try {
     const users = await User.findAll({
-      where: {
-        userType: "admin",
-      },
       attributes: ["id", "username", "email", "userType"],
       order: [["id", "ASC"]],
     });
